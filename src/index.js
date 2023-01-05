@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDom from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.css'
-import reportWebVitals from './reportWebVitals'
 
-const element = <h1>Hello World</h1>
+import reportWebVitals from './reportWebVitals'
+import Cards from './components/cards'
 
 const root = ReactDom.createRoot(document.getElementById('root'))
-root.render(element)
+root.render(<Cards />)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
