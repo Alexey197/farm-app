@@ -39,7 +39,9 @@ const tableParameters = [
   'Set'
 ]
 
-export default {
-  farm,
-  tableParameters
-}
+// export default {
+//   farm,
+//   tableParameters
+// }
+
+export default farm
