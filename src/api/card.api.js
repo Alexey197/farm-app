@@ -27,9 +27,9 @@ const rig3 = [
   `Palit RTX 3070`
 ]
 
-const farm = [rig1, rig2, rig3]
+export const farm = [rig1, rig2, rig3]
 
-const tableParameters = [
+export const tableParameters = [
   'Card Model',
   'Core Clock offset, MHz',
   'Memory Clock offset, MHz',
@@ -44,4 +44,4 @@ const tableParameters = [
 //   tableParameters
 // }
 
-export default farm
+// export default farm
