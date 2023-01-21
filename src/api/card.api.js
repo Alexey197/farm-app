@@ -1,30 +1,30 @@
 export const rig1 = [
-    `Palit RTX 3070`,
-    `Palit RTX 3070`,
-    `Palit RTX 3070`,
-    `Nvidia RTX 3070m`,
-    `Nvidia RTX 3070m`,
-    `Nvidia RTX 3070m`
+    {_id: 1, name: 'Palit RTX 3070'},
+    {_id: 2, name: 'Palit RTX 3070'},
+    {_id: 3, name: 'Palit RTX 3070'},
+    {_id: 4, name: 'Palit RTX 3070m'},
+    {_id: 5, name: 'Palit RTX 3070m'},
+    {_id: 6, name: 'Palit RTX 3070m'}
 ]
 
 const rig2 = [
-    `Palit RTX 3070`,
-    `Gigabyte RTX 3060 Ti`,
-    `Palit RTX 3070`,
-    `Gigabyte RTX 3060 Ti`,
-    `Gigabyte RTX 3060 Ti`,
-    `Palit RTX 3070`
+    {_id: 1, name: 'Palit RTX 3070'},
+    {_id: 2, name: 'Gigabyte RTX 3060 Ti'},
+    {_id: 3, name: 'Palit RTX 3070'},
+    {_id: 4, name: 'Gigabyte RTX 3060 Ti'},
+    {_id: 5, name: 'Gigabyte RTX 3060 Ti'},
+    {_id: 6, name: 'Palit RTX 3070'}
 ]
 
 const rig3 = [
-    `Palit RTX 3070`,
-    `Palit RTX 3070`,
-    `Palit RTX 3070`,
-    `Palit RTX 3070`,
-    `Palit RTX 3070`,
-    `Palit RTX 3070`,
-    `Nvidia CMP 90HX`,
-    `Palit RTX 3070`
+    {_id: 1, name: 'Palit RTX 3070'},
+    {_id: 2, name: 'Palit RTX 3070'},
+    {_id: 3, name: 'Palit RTX 3070'},
+    {_id: 4, name: 'Palit RTX 3070'},
+    {_id: 5, name: 'Palit RTX 3070'},
+    {_id: 6, name: 'Palit RTX 3070'},
+    {_id: 7, name: 'Nvidia CMP 90HX'},
+    {_id: 8, name: 'Palit RTX 3070'}
 ]
 
 export const farm = [rig1, rig2, rig3]
