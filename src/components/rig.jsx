@@ -1,11 +1,17 @@
 import React, {useState} from 'react'
 import {tableParameters} from '../api/card.api'
+import Cell from "./cell";
 
 const Rig = ({rig, rigNumber}) => {
+    console.log(rig, rigNumber)
     const [cards, setCards] = useState(rig)
+    // const [id, setId] = useState()
     const updatedTableParam = tableParameters.filter(params => params !== [...tableParameters].shift())
     const handleDelete = (cardId) => {
         setCards(cards.filter(card => card._id !== cardId))
+    }
+    const handleClick = (rig, row, col) => {
+        console.log(`${rig}:${row}:${col}`)
     }
     return (
         <>
@@ -24,10 +30,13 @@ const Rig = ({rig, rigNumber}) => {
                 {cards.map(card => (
                     <tr key={card._id}>
                         <td>{card._id}</td>
-                        <td suppressContentEditableWarning={true}>{card.name}</td>
+                        <td>{card.name}</td>
                         {updatedTableParam.map((_, paramIndex) => (
-                            <td id={`${rigNumber}:${card._id}:${paramIndex + 1}`} key={paramIndex}
-                                contentEditable={"true"}></td>
+                            <Cell
+                                key={`${rigNumber}:${card._id}:${paramIndex + 1}`}
+                                id={`${rigNumber}:${card._id}:${paramIndex + 1}`}
+                                onShow={() => handleClick(rigNumber, card._id, paramIndex + 1)}
+                            />
                         ))}
                         <td>
                             <button
@@ -39,24 +48,6 @@ const Rig = ({rig, rigNumber}) => {
                         </td>
                     </tr>
                 ))}
-                {/*{cards.map((card, cardIndex) => (*/}
-                {/*    <tr key={cardIndex}>*/}
-                {/*        <td>{cardIndex + 1}</td>*/}
-                {/*        <td suppressContentEditableWarning={true}>{card}</td>*/}
-                {/*        {updatedTableParam.map((_, paramIndex) => (*/}
-                {/*            <td id={`${rigNumber}:${cardIndex + 1}:${paramIndex + 1}`} key={paramIndex}*/}
-                {/*                contentEditable={"true"}></td>*/}
-                {/*        ))}*/}
-                {/*        <td>*/}
-                {/*            <button*/}
-                {/*                className={"btn btn-danger"}*/}
-                {/*                onClick={(e) => handleDelete(e)}*/}
-                {/*            >*/}
-                {/*                Удалить*/}
-                {/*            </button>*/}
-                {/*        </td>*/}
-                {/*    </tr>*/}
-                {/*))}*/}
                 </tbody>
             </table>
         </>

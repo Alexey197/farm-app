@@ -1,4 +1,4 @@
-export const rig1 = [
+const rig1 = [
     {_id: 1, name: 'Palit RTX 3070'},
     {_id: 2, name: 'Palit RTX 3070'},
     {_id: 3, name: 'Palit RTX 3070'},

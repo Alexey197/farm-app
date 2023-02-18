@@ -2,7 +2,7 @@ import React from 'react'
 import {farm} from '../api/card.api'
 import Rig from './rig'
 
-const Rigs = () => {
+const RigsList = () => {
     return <>
         {farm
             .map((rig, index) =>
@@ -15,4 +15,4 @@ const Rigs = () => {
     </>
 }
 
-export default Rigs
+export default RigsList
