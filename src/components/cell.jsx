@@ -1,13 +1,13 @@
 import React from "react"
 
-const Cell = (props) => {
+const Cell = ({rig, row, col, onShow, onType}) => {
+    // const {rig, row, col} = props
     return (
         <td
             suppressContentEditableWarning={true}
-            key={`${props.rig}:${props.row}:${props.col}`}
-            id={`${props.rig}:${props.row}:${props.col}`}
+            key={`${rig}:${row}:${col}`}
             contentEditable={"true"}
-            onClick={props.onShow}
+            onClick={onShow}
         >
         </td>
     )

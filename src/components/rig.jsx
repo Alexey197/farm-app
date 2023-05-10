@@ -5,7 +5,7 @@ import Cell from "./cell";
 const Rig = ({rig, rigNumber}) => {
     console.log(rig, rigNumber)
     const [cards, setCards] = useState(rig)
-    // const [id, setId] = useState()
+    const [value, setValue] = useState('')
     const updatedTableParam = tableParameters.filter(params => params !== [...tableParameters].shift())
     const handleDelete = (cardId) => {
         setCards(cards.filter(card => card._id !== cardId))
@@ -34,7 +34,6 @@ const Rig = ({rig, rigNumber}) => {
                         {updatedTableParam.map((_, paramIndex) => (
                             <Cell
                                 key={`${rigNumber}:${card._id}:${paramIndex + 1}`}
-                                id={`${rigNumber}:${card._id}:${paramIndex + 1}`}
                                 onShow={() => handleClick(rigNumber, card._id, paramIndex + 1)}
                             />
                         ))}
